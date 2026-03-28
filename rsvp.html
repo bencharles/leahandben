@@ -11,11 +11,10 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       --amber:#C8985A;--amber-dark:#9A7230;
-      --sage:#698A62;--cream:#F6EFE0;
-      --warm-dark:#26180A;--forest:#0C1908;
-      --diag:68px;
+      --cream:#F6EFE0;--warm-dark:#26180A;
+      --forest:#0C1908;--diag:68px;
     }
-    html,body{min-height:100%;font-family:'Jost',sans-serif;color:var(--warm-dark);overflow-x:hidden;-webkit-font-smoothing:antialiased;background:var(--cream)}
+    html,body{height:100%;font-family:'Jost',sans-serif;color:var(--warm-dark);overflow-x:hidden;-webkit-font-smoothing:antialiased;background:var(--cream)}
 
     /* ══ NAV ══ */
     nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:center;gap:clamp(6px,2vw,14px);padding:clamp(10px,2vw,16px) 20px;background:rgba(246,239,224,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(200,152,90,0.18)}
@@ -23,23 +22,35 @@
     .tab-btn.active{color:var(--warm-dark);background:rgba(200,152,90,0.15)}
     .tab-btn:hover{color:var(--warm-dark)}
 
-    /* ══ HEADER HERO ══ */
-    .page-header{padding:clamp(100px,14vw,140px) 20px clamp(60px,8vw,80px);text-align:center;position:relative;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - var(--diag)),0 100%);padding-bottom:calc(clamp(60px,8vw,80px) + var(--diag));min-height:clamp(360px,55vw,520px);display:flex;align-items:center;justify-content:center}
-    .page-header-bg{position:absolute;inset:0;background-image:url("images/rsvp-boardwalk-bw.jpg");background-size:cover;background-position:center 40%}
-    .page-header-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,25,8,0.55) 0%,rgba(12,25,8,0.7) 100%)}
-    .page-header-inner{position:relative;z-index:1}
-    .page-eyebrow{font-size:0.6rem;letter-spacing:0.44em;text-transform:uppercase;color:var(--amber);font-weight:300;margin-bottom:14px}
-    .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,7vw,4.8rem);font-weight:300;color:#fff;letter-spacing:0.04em;line-height:1.1}
-    .page-rule{width:55px;height:1px;background:var(--amber);margin:20px auto;opacity:0.6}
-    .page-sub{font-size:clamp(0.58rem,1.4vw,0.72rem);font-weight:200;letter-spacing:0.36em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
+    /* ══ PAGE HEADER ══ */
+    .page-header{padding:clamp(100px,14vw,140px) 20px clamp(48px,6vw,64px);text-align:center;background:var(--cream);border-bottom:1px solid rgba(200,152,90,0.15)}
+    .page-eyebrow{font-size:0.6rem;letter-spacing:0.44em;text-transform:uppercase;color:var(--amber-dark);font-weight:300;margin-bottom:14px}
+    .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:300;color:var(--warm-dark);letter-spacing:0.04em;line-height:1.05}
+    .page-rule{width:52px;height:1px;background:var(--amber);margin:20px auto;opacity:0.55}
+    .page-sub{font-size:0.8rem;font-weight:300;color:#7a6a5a;line-height:1.9;max-width:380px;margin:0 auto}
 
-    /* ══ EMBED SECTION ══ */
-    .embed-section{padding:clamp(50px,8vw,80px) clamp(16px,5vw,24px) clamp(60px,8vw,100px);max-width:860px;margin:0 auto}
+    /* ══ SPLIT LAYOUT ══ */
+    .split-wrap{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding:clamp(32px,5vw,60px);gap:clamp(24px,4vw,48px)}
+
+    /* Left: photo — stretches to match form height */
+    .photo-panel{position:relative;overflow:hidden;border-radius:8px;min-height:300px}
+    .photo-panel-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
+    .photo-panel-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,25,8,0.1) 0%,rgba(12,25,8,0.35) 100%)}
+
+    /* Right: RSVP embed panel */
+    .form-panel{background:var(--cream);display:flex;flex-direction:column;justify-content:flex-start}
+    .embed-wrap{width:100%}
 
     /* ══ FOOTER ══ */
-    footer{text-align:center;padding:clamp(36px,5vw,52px) 20px clamp(24px,4vw,36px);background:var(--cream);border-top:1px solid rgba(200,152,90,0.15)}
-    .footer-names{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,4vw,2rem);font-weight:300;color:var(--amber-dark);letter-spacing:0.04em}
+    footer{text-align:center;padding:clamp(28px,4vw,40px) 20px;background:var(--cream);border-top:1px solid rgba(200,152,90,0.15);grid-column:1/-1}
+    .footer-names{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:300;color:var(--amber-dark);letter-spacing:0.04em}
 
+    /* ══ MOBILE ══ */
+    @media(max-width:768px){
+      .split-wrap{grid-template-columns:1fr;padding:clamp(20px,4vw,32px)}
+      .photo-panel{min-height:260px;max-height:360px}
+      footer{grid-column:1}
+    }
     @media(max-width:640px){:root{--diag:44px}}
   </style>
 </head>
@@ -53,24 +64,33 @@
 
   <!-- ══ PAGE HEADER ══ -->
   <div class="page-header">
-    <div class="page-header-bg"></div>
-    <div class="page-header-inner">
-      <div class="page-eyebrow">We hope to see you there</div>
-      <h1 class="page-title">RSVP</h1>
-      <div class="page-rule"></div>
-      <div class="page-sub">Leah &amp; Ben &nbsp;&middot;&nbsp; August 15, 2026</div>
+    <div class="page-eyebrow">We hope to see you there</div>
+    <h1 class="page-title">RSVP</h1>
+    <div class="page-rule"></div>
+    <p class="page-sub">Please let us know if you'll be joining us by <strong>June 15, 2026</strong>. We can't wait to celebrate with you.</p>
+  </div>
+
+  <div class="split-wrap">
+
+    <!-- Left: photo -->
+    <div class="photo-panel">
+      <img class="photo-panel-img" src="images/rsvp-boardwalk-bw.jpg" alt="Leah and Ben">
+      <div class="photo-panel-overlay"></div>
     </div>
-  </div>
 
-  <!-- ══ RSVPIFY EMBED ══ -->
-  <div class="embed-section">
-    <script type="text/javascript" src="https://leahandben.rsvpify.com/embed"></script>
-  </div>
+    <!-- Right: embed -->
+    <div class="form-panel">
+      <div class="embed-wrap">
+        <script type="text/javascript" src="https://leahandben.rsvpify.com/embed"></script>
+      </div>
+    </div>
 
-  <!-- ══ FOOTER ══ -->
-  <footer>
-    <div class="footer-names">Leah &amp; Ben</div>
-  </footer>
+    <!-- Footer (spans right column) -->
+    <footer>
+      <div class="footer-names">Leah &amp; Ben</div>
+    </footer>
+
+  </div>
 
 </body>
 </html>
