@@ -4,19 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Leah &amp; Ben — August 15, 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --amber:#C8985A;--amber-dark:#9A7230;
-      --sage:#698A62;--sage-light:#A8BDA2;
-      --cream:#F6EFE0;--warm-dark:#26180A;
-      --forest:#0C1908;--gold:#C8985A;
-      --overlay:rgba(8,14,5,0.48);--diag:68px;
-    }
-    html,body{height:100%;font-family:'Jost',sans-serif;color:var(--warm-dark);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
     /* ══ LOADER ══ */
     #loader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -75,9 +64,6 @@
     .rsvp-section{background:var(--cream);padding:clamp(80px,12vw,130px) clamp(16px,5vw,24px) 80px;text-align:center;position:relative;z-index:2;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
 
     /* ══ SHARED TYPOGRAPHY ══ */
-    .eyebrow{font-family:'Cinzel',serif;font-size:0.74rem;letter-spacing:0.18em;color:var(--sage);font-weight:400;margin-bottom:16px}
-    .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,5vw,3.4rem);font-weight:300;color:var(--warm-dark);margin-bottom:22px;line-height:1.15;letter-spacing:0.02em}
-    .rule{width:55px;height:1px;background:var(--amber-dark);margin:0 auto 28px;opacity:0.55}
 
     /* ══ COUNTDOWN ══ */
     .countdown-blocks{display:flex;justify-content:center;gap:clamp(14px,3vw,32px);margin-top:clamp(36px,5vw,52px);flex-wrap:wrap;align-items:center}
@@ -131,18 +117,11 @@
 
     /* ══ FOOTER ══ */
     footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);position:relative;z-index:4;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
-    .footer-names{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:300;color:var(--amber-dark);letter-spacing:0.04em}
     .footer-rule{width:50px;height:1px;background:var(--amber);margin:18px auto;opacity:0.5}
     .footer-meta{font-family:'Jost',sans-serif;font-size:0.54rem;font-weight:300;letter-spacing:0.34em;text-transform:uppercase;color:#9a8a7a}
 
-    /* ══ FADE-UP ══ */
-    .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
-    .fade-up.visible{opacity:1;transform:none}
 
     /* ══ RESPONSIVE ══ */
-    @media(max-width:640px){
-      :root{--diag:44px}
-    }
     @media(max-width:700px){
       .details-split{grid-template-columns:1fr}
       .split-photo-wrap{border-radius:4px 4px 0 0;aspect-ratio:4/3;max-height:340px}
