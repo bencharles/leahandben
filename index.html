@@ -49,7 +49,7 @@
     .hero-names{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,10vw,7rem);font-weight:300;letter-spacing:0.05em;line-height:1.05;text-shadow:0 2px 40px rgba(0,0,0,0.3)}
     .h-amp{color:var(--amber);font-style:italic}
     .hero-rule{width:70px;height:1px;background:var(--amber);margin:18px auto;opacity:0.75}
-    .hero-meta{font-family:'Cinzel',serif;font-size:clamp(0.78rem,1.8vw,0.96rem);font-weight:400;letter-spacing:0.16em;color:rgba(255,255,255,0.92);line-height:2.4;text-shadow:0 1px 12px rgba(0,0,0,0.55)}
+    .hero-meta{font-family:'Cinzel',serif;font-size:clamp(0.9rem,2vw,1.1rem);font-weight:400;letter-spacing:0.16em;color:rgba(255,255,255,0.92);line-height:2.4;text-shadow:0 1px 12px rgba(0,0,0,0.55)}
     .hero-verse{margin-top:36px;padding:0 16px;max-width:520px;margin-left:auto;margin-right:auto}
     .hero-verse-rule{width:44px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);margin:0 auto 16px}
     .hero-verse-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,3vw,1.7rem);font-weight:400;color:#fff;line-height:1.85;text-shadow:0 2px 20px rgba(0,0,0,0.9),0 0 40px rgba(0,0,0,0.7)}
@@ -59,38 +59,38 @@
     .scroll-arrow{width:1px;height:34px;background:linear-gradient(to bottom,rgba(255,255,255,0.7),transparent)}
 
     /* ══ DIAGONAL SECTIONS ══ */
-    .countdown-section{background:var(--cream);padding:clamp(80px,12vw,130px) clamp(16px,5vw,24px) 80px;text-align:center;position:relative;z-index:2;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
-    .nyc-section{position:relative;background:radial-gradient(ellipse 120% 80% at 50% 100%,#2E3A12 0%,var(--forest) 55%);padding:clamp(80px,12vw,130px) clamp(16px,5vw,24px) clamp(60px,8vw,90px);overflow:hidden;z-index:3;clip-path:polygon(0 0,100% var(--diag),100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
-    .rsvp-section{background:var(--cream);padding:clamp(80px,12vw,130px) clamp(16px,5vw,24px) 80px;text-align:center;position:relative;z-index:2;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
+    .dayof-section{background:var(--cream);padding:clamp(80px,12vw,130px) clamp(16px,5vw,24px) 80px;text-align:center;position:relative;z-index:2;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
 
-    /* ══ SHARED TYPOGRAPHY ══ */
-
-    /* ══ COUNTDOWN ══ */
-    .countdown-blocks{display:flex;justify-content:center;gap:clamp(14px,3vw,32px);margin-top:clamp(36px,5vw,52px);flex-wrap:wrap;align-items:center}
-    .countdown-block{display:flex;flex-direction:column;align-items:center;gap:11px}
-    .cd-card{position:relative;background:#fff;border:1px solid rgba(158,114,48,0.18);border-radius:14px;width:clamp(80px,15vw,114px);height:clamp(80px,15vw,114px);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 28px rgba(38,24,10,0.10),0 1px 4px rgba(38,24,10,0.06);overflow:hidden}
-    .cd-card::before{content:'';position:absolute;top:0;left:12%;right:12%;height:2px;background:linear-gradient(90deg,transparent,rgba(200,152,90,0.75),transparent)}
-    .countdown-num{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,6.5vw,4.2rem);font-weight:300;color:var(--warm-dark);line-height:1}
-    .countdown-unit{font-family:'Cinzel',serif;font-size:0.66rem;letter-spacing:0.14em;color:var(--amber-dark);font-weight:400}
-    @keyframes cdSlide{0%{opacity:0;transform:translateY(-8px) scale(0.94)}100%{opacity:1;transform:translateY(0) scale(1)}}
+    /* ══ COUNTDOWN (compact) ══ */
+    .countdown-blocks{display:flex;justify-content:center;gap:clamp(10px,2vw,18px);flex-wrap:wrap;align-items:center}
+    .countdown-block{display:flex;flex-direction:column;align-items:center;gap:7px}
+    .cd-card{position:relative;background:#fff;border:1px solid rgba(158,114,48,0.18);border-radius:10px;width:clamp(56px,10vw,72px);height:clamp(56px,10vw,72px);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(38,24,10,0.08),0 1px 3px rgba(38,24,10,0.05);overflow:hidden}
+    .cd-card::before{content:'';position:absolute;top:0;left:12%;right:12%;height:1.5px;background:linear-gradient(90deg,transparent,rgba(200,152,90,0.65),transparent)}
+    .countdown-num{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:300;color:var(--warm-dark);line-height:1}
+    .countdown-unit{font-family:'Cinzel',serif;font-size:0.66rem;letter-spacing:0.12em;color:var(--amber-dark);font-weight:400}
+    @keyframes cdSlide{0%{opacity:0;transform:translateY(-6px) scale(0.95)}100%{opacity:1;transform:translateY(0) scale(1)}}
     .cd-new{animation:cdSlide 0.3s cubic-bezier(0.22,1,0.36,1)}
+    .sched-divider{width:52px;height:1px;background:var(--amber);margin:clamp(36px,5vw,52px) auto;opacity:0.35}
 
-    /* ══ DETAILS SPLIT ══ */
-    .details-split{display:grid;grid-template-columns:1fr 1fr;max-width:1040px;margin:0 auto;gap:0;align-items:center}
-    .split-photo-wrap{position:relative;overflow:hidden;border-radius:4px 0 0 4px;aspect-ratio:3/4;box-shadow:-6px 0 40px rgba(0,0,0,0.5)}
-    .split-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 62%;display:block;filter:grayscale(15%) contrast(1.05);transition:transform 0.6s ease}
-    .split-photo-wrap:hover img{transform:scale(1.03)}
-    .split-photo-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(74,83,32,0.7) 100%);pointer-events:none}
-    .split-details{padding:clamp(40px,6vw,72px) clamp(28px,5vw,60px);display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,0.03);border:1px solid rgba(200,152,90,0.12);border-left:none;border-radius:0 4px 4px 0;min-height:100%}
-    .split-eyebrow{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.18em;color:var(--gold);font-weight:400;margin-bottom:18px}
-    .split-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:clamp(28px,4vw,44px);text-shadow:0 0 30px rgba(200,152,90,0.3)}
-    .split-items{display:flex;flex-direction:column;gap:clamp(20px,3vw,30px)}
-    .split-item{display:flex;align-items:flex-start;gap:16px}
-    .split-item-icon{flex-shrink:0;width:36px;height:36px;border:1px solid rgba(200,152,90,0.35);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
-    .split-item-label{font-family:'Cinzel',serif;font-size:0.66rem;letter-spacing:0.14em;color:var(--gold);font-weight:400;margin-bottom:6px}
-    .split-item-value{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.2vw,1.3rem);font-weight:300;color:#fff;line-height:1.4}
-    .split-item-sub{font-size:0.6rem;letter-spacing:0.18em;color:rgba(255,255,255,0.38);font-weight:200;margin-top:4px}
-    .split-rule{width:40px;height:1px;background:linear-gradient(90deg,rgba(200,152,90,0.6),transparent);margin:clamp(28px,4vw,44px) 0}
+    /* ══ DAY-OF SCHEDULE ══ */
+    .sched-date{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:300;color:var(--amber-dark);letter-spacing:0.06em;margin-top:10px}
+    .schedule{max-width:520px;margin:clamp(44px,6vw,64px) auto 0;text-align:left}
+    .sched-item{display:flex;gap:0;position:relative;padding-bottom:clamp(32px,4vw,44px)}
+    .sched-item:last-child{padding-bottom:0}
+    .sched-stem{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;padding-top:4px}
+    .sched-dot{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--amber);background:var(--cream);flex-shrink:0;z-index:2}
+    .sched-item.featured .sched-dot{background:var(--amber);box-shadow:0 0 0 4px rgba(200,152,90,0.15);width:13px;height:13px}
+    .sched-line{flex:1;width:1px;background:linear-gradient(to bottom,var(--amber),rgba(200,152,90,0.15));margin-top:6px}
+    .sched-item:last-child .sched-line{display:none}
+    .sched-content{padding-left:clamp(16px,2.5vw,24px);flex:1}
+    .sched-header{display:flex;align-items:center;gap:10px;margin-bottom:5px}
+    .sched-icon{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(200,152,90,0.5);background:rgba(200,152,90,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .sched-event{font-family:'Cormorant Garamond',serif;font-size:clamp(1.55rem,3.2vw,2.1rem);font-weight:300;color:var(--warm-dark);line-height:1.2}
+    .sched-tbd{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.14em;color:var(--amber-dark);text-transform:uppercase;margin-bottom:8px}
+    .sched-venue{font-family:'Jost',sans-serif;font-size:clamp(0.95rem,1.8vw,1.1rem);font-weight:400;color:var(--forest);margin-bottom:3px}
+    .sched-address{font-family:'Jost',sans-serif;font-size:clamp(0.88rem,1.6vw,1rem);font-weight:300;color:#9a8a7a;line-height:1.6}
+    .sched-btn{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-family:'Cinzel',serif;font-size:0.64rem;letter-spacing:0.14em;color:var(--amber-dark);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(200,152,90,0.3);padding-bottom:2px;transition:border-color 0.2s,color 0.2s}
+    .sched-btn:hover{color:var(--forest);border-color:var(--forest)}
 
     /* ══ ADD TO CALENDAR ══ */
     .cal-cta-btn{display:inline-flex;align-items:center;gap:12px;padding:15px 34px;border:none;border-radius:50px;cursor:pointer;background:linear-gradient(135deg,#C8985A 0%,#D4A860 50%,#B87E3A 100%);color:var(--forest);font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;box-shadow:0 6px 28px rgba(200,152,90,0.4),0 2px 8px rgba(0,0,0,0.3);transition:transform 0.18s ease,box-shadow 0.18s ease;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
@@ -116,19 +116,13 @@
     .success-text{font-size:0.88rem;font-weight:300;color:#6a5a4a;line-height:1.8}
 
     /* ══ FOOTER ══ */
-    footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);position:relative;z-index:4;clip-path:polygon(0 var(--diag),100% 0,100% 100%,0 100%);margin-top:calc(-1 * var(--diag))}
+    footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);position:relative;z-index:4}
     .footer-rule{width:50px;height:1px;background:var(--amber);margin:18px auto;opacity:0.5}
     .footer-meta{font-family:'Jost',sans-serif;font-size:0.54rem;font-weight:300;letter-spacing:0.34em;text-transform:uppercase;color:#9a8a7a}
 
-
     /* ══ RESPONSIVE ══ */
-    @media(max-width:700px){
-      .details-split{grid-template-columns:1fr}
-      .split-photo-wrap{border-radius:4px 4px 0 0;aspect-ratio:4/3;max-height:340px}
-      .split-photo-overlay{background:linear-gradient(to bottom,transparent 60%,rgba(74,83,32,0.8) 100%)}
-      .split-details{border-left:1px solid rgba(200,152,90,0.12);border-top:none;border-radius:0 0 4px 4px;padding:36px 28px}
-    }
     @media(max-width:520px){
+      .schedule{max-width:100%}
       .form-row{flex-direction:column;gap:0}
       .cal-cta-btn{padding:14px 26px;font-size:0.65rem;gap:10px}
     }
@@ -174,11 +168,69 @@
       </div>
     </div>
 
-    <!-- Countdown -->
-    <section class="countdown-section fade-up">
-      <div class="eyebrow">Counting Down</div>
-      <h2 class="section-title">The Big Day</h2>
+    <!-- Day-Of Schedule -->
+    <section class="dayof-section fade-up">
+      <div class="eyebrow">The Day</div>
+      <h2 class="section-title">August 15, 2026</h2>
       <div class="rule"></div>
+
+      <div class="schedule">
+
+        <!-- Ceremony -->
+        <div class="sched-item featured">
+          <div class="sched-stem">
+            <div class="sched-dot"></div>
+            <div class="sched-line"></div>
+          </div>
+          <div class="sched-content">
+            <div class="sched-header">
+              <div class="sched-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.4" stroke-linecap="round">
+                  <line x1="12" y1="2" x2="12" y2="22"/>
+                  <line x1="7" y1="7" x2="17" y2="7"/>
+                </svg>
+              </div>
+              <div class="sched-event">Ceremony</div>
+            </div>
+
+            <div class="sched-venue">Immaculate Conception Church</div>
+            <div class="sched-address">30 N Fullerton Ave, Montclair, NJ 07042</div>
+            <a class="sched-btn" href="https://maps.google.com/?q=30+N+Fullerton+Ave+Montclair+NJ+07042" target="_blank">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Cocktail Hour & Reception -->
+        <div class="sched-item">
+          <div class="sched-stem">
+            <div class="sched-dot"></div>
+          </div>
+          <div class="sched-content">
+            <div class="sched-header">
+              <div class="sched-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.4">
+                  <circle cx="8.5" cy="12" r="4.5"/>
+                  <circle cx="15.5" cy="12" r="4.5"/>
+                </svg>
+              </div>
+              <div class="sched-event">Cocktail Hour &amp; Reception</div>
+            </div>
+
+            <div class="sched-venue">The Tides Estate</div>
+            <div class="sched-address">1245 Belmont Ave, North Haledon, NJ 07508</div>
+            <a class="sched-btn" href="https://maps.google.com/?q=1245+Belmont+Ave+North+Haledon+NJ+07508" target="_blank">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sched-divider"></div>
+
       <div class="countdown-blocks">
         <div class="countdown-block">
           <div class="cd-card"><div class="countdown-num" id="cd-days">--</div></div>
@@ -197,69 +249,12 @@
           <div class="countdown-unit">Seconds</div>
         </div>
       </div>
-      <div style="margin-top:clamp(32px,5vw,48px)">
+
+      <div style="margin-top:clamp(24px,3vw,32px)">
         <button class="cal-cta-btn" onclick="downloadICS()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:8px;margin-top:-2px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Add to Calendar
         </button>
-      </div>
-    </section>
-
-    <!-- Details: photo + info -->
-    <section class="nyc-section">
-      <div class="details-split fade-up">
-        <div class="split-photo-wrap">
-          <img src="images/running.jpg" alt="Leah and Ben" loading="lazy"/>
-          <div class="split-photo-overlay"></div>
-        </div>
-        <div class="split-details">
-          <div class="split-eyebrow">The Details</div>
-          <div class="split-title">Mark Your<br>Calendar</div>
-          <div class="split-items">
-            <div class="split-item">
-              <div class="split-item-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="5" width="18" height="16" rx="2.5" stroke="#C8985A" stroke-width="1.4"/>
-                  <line x1="3" y1="10" x2="21" y2="10" stroke="#C8985A" stroke-width="1.4"/>
-                  <line x1="8" y1="3" x2="8" y2="7" stroke="#C8985A" stroke-width="1.4" stroke-linecap="round"/>
-                  <line x1="16" y1="3" x2="16" y2="7" stroke="#C8985A" stroke-width="1.4" stroke-linecap="round"/>
-                  <text x="12" y="19" text-anchor="middle" font-size="6" fill="#C8985A" font-family="Jost">15</text>
-                </svg>
-              </div>
-              <div>
-                <div class="split-item-label">Date</div>
-                <div class="split-item-value">August 15, 2026</div>
-                
-              </div>
-            </div>
-            <div class="split-item">
-              <div class="split-item-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#C8985A" stroke-width="1.4"/>
-                  <circle cx="12" cy="9" r="2.5" stroke="#C8985A" stroke-width="1.3"/>
-                </svg>
-              </div>
-              <div>
-                <div class="split-item-label">Location</div>
-                <div class="split-item-value">Montclair, New Jersey</div>
-                
-              </div>
-            </div>
-            <div class="split-item">
-              <div class="split-item-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <circle cx="8.5" cy="12" r="4.5" stroke="#C8985A" stroke-width="1.4"/>
-                  <circle cx="15.5" cy="12" r="4.5" stroke="#C8985A" stroke-width="1.4"/>
-                </svg>
-              </div>
-              <div>
-                <div class="split-item-label">Ceremony &amp; Reception</div>
-                <div class="split-item-value">Ceremony &amp; Reception</div>
-              </div>
-            </div>
-          </div>
-          <div class="split-rule"></div>
-        </div>
       </div>
     </section>
 
@@ -361,6 +356,8 @@ function downloadICS() {
   document.body.removeChild(a); URL.revokeObjectURL(url);
 }
 
+
+// ── Countdown ──
 function setCD(id, val) {
   const el = document.getElementById(id);
   if (el && el.textContent !== val) {

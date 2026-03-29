@@ -58,7 +58,7 @@ nav{
 /* ══ SHARED TYPOGRAPHY ══ */
 .eyebrow{
   font-family:'Cinzel',serif;
-  font-size:0.74rem;
+  font-size:0.84rem;
   letter-spacing:0.18em;
   color:var(--sage);
   font-weight:400;
@@ -66,7 +66,7 @@ nav{
 }
 .section-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(1.9rem,5vw,3.4rem);
+  font-size:clamp(2.4rem,6vw,4.2rem);
   font-weight:300;
   color:var(--warm-dark);
   margin-bottom:22px;
