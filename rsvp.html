@@ -41,7 +41,7 @@
   </style>
 </head>
 <body>
-  <script>if(!sessionStorage.getItem("lb_unlocked"))window.location.replace("index.html");</script>
+  <script>if(!sessionStorage.getItem("lb_unlocked")&&!localStorage.getItem("lb_pw"))window.location.replace("index.html");</script>
 
   <!-- ══ NAV ══ -->
   <nav>
