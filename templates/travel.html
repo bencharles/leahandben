@@ -1,0 +1,225 @@
+{{TITLE: Travel & Accommodations — Leah & Ben}}
+{{NAV_ACTIVE: travel}}
+{{NAV_CLASS: nav-dark}}
+
+{{STYLES}}
+    /* ══ PAGE HEADER ══ */
+    .page-header{padding:clamp(100px,14vw,140px) 20px clamp(48px,6vw,64px);text-align:center;background:var(--cream);border-bottom:1px solid rgba(200,152,90,0.15);position:relative;overflow:hidden}
+    .page-header-icon{width:52px;height:52px;margin:0 auto 20px;opacity:0.25}
+    .page-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.55rem);font-weight:300;color:var(--amber-dark);margin-bottom:16px;letter-spacing:0.02em}
+    .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:300;color:var(--warm-dark);letter-spacing:0.04em;line-height:1.05}
+    .page-rule{width:52px;height:1px;background:var(--amber-dark);margin:20px auto;opacity:0.55}
+    .page-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.4rem);font-weight:300;color:#7a6a5a;line-height:1.9;max-width:520px;margin:0 auto}
+
+    /* ══ CONTENT ══ */
+    .travel-content{max-width:800px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,40px)}
+
+    /* ══ SECTION HEADER ══ */
+    .travel-section{margin-bottom:clamp(52px,7vw,80px)}
+    .section-label{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+    .section-label-icon{width:36px;height:36px;border-radius:50%;background:rgba(200,152,90,0.1);border:1px solid rgba(200,152,90,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .travel-section-eyebrow{font-family:'Cinzel',serif;font-size:0.74rem;letter-spacing:0.22em;color:var(--sage);font-weight:400;text-transform:uppercase}
+    .travel-section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:var(--warm-dark);line-height:1.1;letter-spacing:0.02em;margin-bottom:24px}
+    .travel-divider{width:52px;height:1px;background:var(--amber);opacity:0.4;margin-bottom:36px}
+
+    /* ══ HOTEL CARD ══ */
+    .hotel-card{background:#fff;border:1px solid rgba(200,152,90,0.18);border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(38,24,10,0.09),0 2px 8px rgba(38,24,10,0.05)}
+    .hotel-card-top{background:linear-gradient(135deg,var(--forest) 0%,#5e6b28 100%);padding:clamp(24px,3.5vw,36px) clamp(28px,4vw,44px);display:flex;align-items:center;gap:20px}
+    .hotel-card-icon{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .hotel-card-header{flex:1}
+    .hotel-badge{display:inline-block;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.2em;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:4px 12px;margin-bottom:8px}
+    .hotel-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:300;color:#fff;line-height:1.1;letter-spacing:0.02em}
+    .hotel-card-body{padding:clamp(24px,3.5vw,36px) clamp(28px,4vw,44px)}
+    .hotel-address-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px}
+    .hotel-address-icon{margin-top:2px;flex-shrink:0;opacity:0.5}
+    .hotel-address{font-family:'Jost',sans-serif;font-size:clamp(0.9rem,1.8vw,1.05rem);font-weight:300;color:#7a6a5a}
+    .hotel-detail{font-family:'Jost',sans-serif;font-size:clamp(0.85rem,1.6vw,0.95rem);font-weight:300;color:#9a8a7a;line-height:1.7;margin:16px 0 24px}
+    .hotel-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .hotel-book-btn{display:inline-flex;align-items:center;gap:10px;padding:13px 30px;background:linear-gradient(135deg,#C8985A 0%,#D4A860 50%,#B87E3A 100%);border:none;border-radius:50px;color:var(--forest);font-family:'Cinzel',serif;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 4px 18px rgba(200,152,90,0.35);transition:transform 0.18s,box-shadow 0.18s}
+    .hotel-book-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,152,90,0.5)}
+    .hotel-map-link{display:inline-flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.16em;color:var(--amber-dark);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(200,152,90,0.35);padding-bottom:2px;transition:color 0.2s,border-color 0.2s}
+    .hotel-map-link:hover{color:var(--forest);border-color:var(--forest)}
+    .hotel-distances{margin-top:28px;padding-top:24px;border-top:1px solid rgba(200,152,90,0.12);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+    .dist-item{display:flex;align-items:flex-start;gap:12px;background:var(--cream);border-radius:10px;padding:14px 16px}
+    .dist-icon{width:32px;height:32px;border-radius:50%;background:rgba(200,152,90,0.12);border:1px solid rgba(200,152,90,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .dist-text{font-family:'Jost',sans-serif;font-size:0.86rem;font-weight:300;color:#7a6a5a;line-height:1.45}
+    .dist-text strong{font-weight:500;color:var(--warm-dark);display:block;font-size:0.95rem}
+
+    /* ══ FLIGHTS ══ */
+    .flights-intro{display:flex;align-items:center;gap:20px;margin-bottom:32px;padding:20px 24px;background:#fff;border:1px solid rgba(200,152,90,0.15);border-radius:10px}
+    .flights-intro-icon{width:44px;height:44px;flex-shrink:0;opacity:0.6}
+    .flights-intro-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2vw,1.2rem);font-weight:300;color:#7a6a5a;line-height:1.7}
+    .airport-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(12px,2vw,20px)}
+    .airport-card{background:#fff;border:1px solid rgba(200,152,90,0.18);border-radius:12px;padding:clamp(20px,3vw,32px) clamp(16px,2.5vw,24px);text-align:center;box-shadow:0 2px 12px rgba(38,24,10,0.05);display:flex;flex-direction:column;align-items:center;gap:0;transition:transform 0.18s,box-shadow 0.18s}
+    .airport-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(38,24,10,0.1)}
+    .airport-card.featured{border-color:var(--forest);background:var(--forest)}
+    .airport-plane{margin-bottom:14px;opacity:0.35}
+    .airport-card.featured .airport-plane{opacity:0.7}
+    .airport-code{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:400;color:var(--warm-dark);letter-spacing:0.1em;margin-bottom:8px;line-height:1}
+    .airport-card.featured .airport-code{color:#fff}
+    .airport-name{font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:300;color:#7a6a5a;line-height:1.5;margin-bottom:14px;flex:1}
+    .airport-card.featured .airport-name{color:rgba(255,255,255,0.65)}
+    .airport-time-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 14px;border-radius:20px;background:rgba(200,152,90,0.1);border:1px solid rgba(200,152,90,0.25);font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.14em;color:var(--amber-dark)}
+    .airport-card.featured .airport-time-pill{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.2);color:var(--sage-light)}
+    .airport-rec{margin-top:10px;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;color:var(--sage-light);background:rgba(170,187,114,0.15);border-radius:12px;padding:4px 12px;border:1px solid rgba(170,187,114,0.25)}
+    .flight-note{margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2vw,1.25rem);font-weight:300;color:#7a6a5a;line-height:1.8;text-align:center}
+
+    /* ══ FOOTER ══ */
+    footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);border-top:1px solid rgba(200,152,90,0.15)}
+
+    /* ══ MOBILE ══ */
+    @media(max-width:640px){
+      .airport-grid{grid-template-columns:1fr}
+      .hotel-actions{flex-direction:column;align-items:flex-start}
+      .hotel-distances{grid-template-columns:1fr}
+      .flights-intro{flex-direction:column;text-align:center}
+    }
+{{/STYLES}}
+
+{{BODY}}
+  <!-- ══ PAGE HEADER ══ -->
+  <div class="page-header">
+    <svg class="page-header-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M32 8C20 8 10 18 10 30C10 46 32 58 32 58C32 58 54 46 54 30C54 18 44 8 32 8Z" stroke="#9A7230" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="32" cy="30" r="7" stroke="#9A7230" stroke-width="2"/>
+    </svg>
+    <div class="page-eyebrow">We want you there with ease</div>
+    <h1 class="page-title">Travel</h1>
+    <div class="page-rule"></div>
+    <p class="page-sub">Everything you need to plan your stay for our big day.</p>
+  </div>
+
+  <div class="travel-content">
+
+    <!-- ══ HOTEL ══ -->
+    <div class="travel-section fade-up">
+      <div class="section-label">
+        <div class="section-label-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M3 22V9a2 2 0 012-2h14a2 2 0 012 2v13"/><path d="M3 22h18"/><path d="M9 22v-5h6v5"/><rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="2" height="2"/><rect x="9" y="13" width="2" height="2"/><rect x="13" y="13" width="2" height="2"/></svg>
+        </div>
+        <div class="travel-section-eyebrow">Where to Stay</div>
+      </div>
+      <h2 class="travel-section-title">Accommodations</h2>
+      <div class="travel-divider"></div>
+
+      <div class="hotel-card">
+        <!-- Dark header -->
+        <div class="hotel-card-top">
+          <div class="hotel-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4" aria-hidden="true"><path d="M3 22V9a2 2 0 012-2h14a2 2 0 012 2v13"/><path d="M3 22h18"/><path d="M9 22v-5h6v5"/><rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="2" height="2"/><rect x="9" y="13" width="2" height="2"/><rect x="13" y="13" width="2" height="2"/></svg>
+          </div>
+          <div class="hotel-card-header">
+            <div class="hotel-badge">Official Wedding Hotel</div>
+            <div class="hotel-name">Marriott Saddle Brook</div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <div class="hotel-card-body">
+          <div class="hotel-address-row">
+            <svg class="hotel-address-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9A7230" stroke-width="1.5" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div class="hotel-address">138 New Pehle Ave, Saddle Brook, NJ 07663</div>
+          </div>
+          <div class="hotel-detail">We have a room block reserved for our guests. Book using the link below to receive our group rate.</div>
+          <div class="hotel-actions">
+            <a class="hotel-book-btn" href="#" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              Book Your Room
+            </a>
+            <a class="hotel-map-link" href="https://maps.google.com/?q=138+New+Pehle+Ave+Saddle+Brook+NJ+07663" target="_blank">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+
+          <div class="hotel-distances">
+            <div class="dist-item">
+              <div class="dist-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              </div>
+              <div class="dist-text"><strong>18 min</strong> to The Tides Estate (Reception)</div>
+            </div>
+            <div class="dist-item">
+              <div class="dist-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+              </div>
+              <div class="dist-text"><strong>19 min</strong> to Immaculate Conception Church (Ceremony)</div>
+            </div>
+            <div class="dist-item">
+              <div class="dist-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M22 16.5H2l2-9h16l2 9z"/><path d="M6 16.5v2"/><path d="M18 16.5v2"/><path d="M2 10.5h20"/><path d="M12 7.5v3"/><circle cx="8" cy="7" r="1"/><circle cx="16" cy="7" r="1"/></svg>
+              </div>
+              <div class="dist-text"><strong>27 min</strong> from Newark Airport (EWR)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FLIGHTS ══ -->
+    <div class="travel-section fade-up">
+      <div class="section-label">
+        <div class="section-label-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+        </div>
+        <div class="travel-section-eyebrow">Getting Here</div>
+      </div>
+      <h2 class="travel-section-title">Flying In</h2>
+      <div class="travel-divider"></div>
+
+      <div class="flights-intro">
+        <svg class="flights-intro-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M56 28L36 20L28 4L20 8L30 24L14 30L6 26L2 30L14 38L18 52L22 50L20 36L38 28L44 48L52 44L40 24L56 28Z" stroke="#9A7230" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <p class="flights-intro-text">We recommend flying into <strong>Newark Liberty (EWR)</strong> — it's the closest airport to both the hotel and venues, and typically the most convenient option for the New York metro area.</p>
+      </div>
+
+      <div class="airport-grid">
+        <div class="airport-card featured">
+          <svg class="airport-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.3" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          <div class="airport-code">EWR</div>
+          <div class="airport-name">Newark Liberty International Airport</div>
+          <div class="airport-time-pill">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            27 min to hotel
+          </div>
+          <div class="airport-rec">★ Recommended</div>
+        </div>
+        <div class="airport-card">
+          <svg class="airport-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.3" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          <div class="airport-code">LGA</div>
+          <div class="airport-name">LaGuardia Airport</div>
+          <div class="airport-time-pill">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~45 min to hotel
+          </div>
+        </div>
+        <div class="airport-card">
+          <svg class="airport-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.3" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          <div class="airport-code">JFK</div>
+          <div class="airport-name">John F. Kennedy International Airport</div>
+          <div class="airport-time-pill">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~55 min to hotel
+          </div>
+        </div>
+      </div>
+
+      <p class="flight-note">Ride-shares are readily available from all three airports.<br>Uber and Lyft both serve the Saddle Brook area.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-names">Leah &amp; Ben</div>
+  </footer>
+{{/BODY}}
+
+{{SCRIPTS}}
+  <script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  </script>
+{{/SCRIPTS}}
