@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#4A5320">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ══ CRITICAL VARS (so page works before stylesheet loads) ══ */
+    :root{--amber:#C8985A;--amber-dark:#9A7230;--sage:#6B7A35;--sage-light:#AABB72;--cream:#F6EFE0;--warm-dark:#26180A;--forest:#4A5320;--overlay:rgba(8,14,5,0.48);--diag:68px}
+
+{{PAGE_STYLES}}
+  </style>
+</head>
+<body>
+{{AUTH_CHECK}}
+  <!-- ══ NAV ══ -->
+  <nav{{NAV_EXTRA_CLS}}>
+    <a class="tab-btn{{NAV_WELCOME_CLS}}" href="index.html">Welcome</a>
+    <a class="tab-btn{{NAV_RSVP_CLS}}" href="rsvp.html">RSVP</a>
+  </nav>
+
+{{PAGE_BODY}}
+
+{{PAGE_SCRIPTS}}
+</body>
+</html>

@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" style="background:#4A5320">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>RSVP — Leah &amp; Ben</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ══ CRITICAL VARS (so page works before stylesheet loads) ══ */
-    :root{--amber:#C8985A;--amber-dark:#9A7230;--sage:#6B7A35;--sage-light:#AABB72;--cream:#F6EFE0;--warm-dark:#26180A;--forest:#4A5320;--overlay:rgba(8,14,5,0.48);--diag:68px}
+{{TITLE: RSVP — Leah & Ben}}
+{{NAV_ACTIVE: rsvp}}
+{{NAV_CLASS: nav-dark}}
 
+{{STYLES}}
     /* ══ PAGE HEADER ══ */
     .page-header{padding:clamp(100px,14vw,140px) 20px clamp(48px,6vw,64px);text-align:center;background:var(--cream);border-bottom:1px solid rgba(200,152,90,0.15)}
     .page-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.55rem);font-weight:300;color:var(--amber-dark);margin-bottom:16px;letter-spacing:0.02em}
@@ -38,17 +32,9 @@
       .photo-panel{min-height:260px;max-height:360px}
       footer{grid-column:1}
     }
-  </style>
-</head>
-<body>
-  <script>if(!sessionStorage.getItem("lb_unlocked")&&!localStorage.getItem("lb_pw"))window.location.replace("index.html");</script>
+{{/STYLES}}
 
-  <!-- ══ NAV ══ -->
-  <nav class="nav-dark">
-    <a class="tab-btn" href="index.html">Welcome</a>
-    <a class="tab-btn active" href="rsvp.html">RSVP</a>
-  </nav>
-
+{{BODY}}
   <!-- ══ PAGE HEADER ══ -->
   <div class="page-header">
     <div class="page-eyebrow">We hope to see you there</div>
@@ -78,7 +64,4 @@
     </footer>
 
   </div>
-
-
-</body>
-</html>
+{{/BODY}}
