@@ -63,12 +63,34 @@
     .airport-rec{margin-top:10px;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;color:var(--sage-light);background:rgba(170,187,114,0.15);border-radius:12px;padding:4px 12px;border:1px solid rgba(170,187,114,0.25)}
     .flight-note{margin-top:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2vw,1.25rem);font-weight:300;color:#7a6a5a;line-height:1.8;text-align:center}
 
+    /* ══ PARKING ══ */
+    .parking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,20px)}
+    .parking-card{background:#fff;border:1px solid rgba(200,152,90,0.18);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(38,24,10,0.05);display:flex;flex-direction:column;transition:transform 0.18s,box-shadow 0.18s}
+    .parking-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(38,24,10,0.1)}
+    .parking-card-accent{height:4px}
+    .parking-card-accent.amber{background:linear-gradient(90deg,var(--amber),var(--amber-dark))}
+    .parking-card-accent.sage{background:linear-gradient(90deg,var(--sage),var(--sage-light))}
+    .parking-card-accent.forest{background:linear-gradient(90deg,var(--forest),#5e6b28)}
+    .parking-card-inner{padding:clamp(20px,3vw,28px);display:flex;flex-direction:column;flex:1}
+    .parking-icon-wrap{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .parking-icon-wrap.amber{background:rgba(200,152,90,0.1);border:1px solid rgba(200,152,90,0.25)}
+    .parking-icon-wrap.sage{background:rgba(107,122,53,0.08);border:1px solid rgba(107,122,53,0.2)}
+    .parking-icon-wrap.forest{background:rgba(74,83,32,0.08);border:1px solid rgba(74,83,32,0.2)}
+    .parking-venue-label{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.18em;color:var(--sage);text-transform:uppercase;margin-bottom:6px}
+    .parking-venue-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.5vw,1.45rem);font-weight:300;color:var(--warm-dark);line-height:1.2;margin-bottom:14px;min-height:5.5rem;display:flex;align-items:flex-start}
+    .parking-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.16em;margin-bottom:14px;width:fit-content}
+    .parking-badge.amber{background:rgba(200,152,90,0.12);border:1px solid rgba(200,152,90,0.3);color:var(--amber-dark)}
+    .parking-badge.sage{background:rgba(107,122,53,0.08);border:1px solid rgba(107,122,53,0.25);color:var(--sage)}
+    .parking-badge.forest{background:rgba(74,83,32,0.08);border:1px solid rgba(74,83,32,0.25);color:var(--forest)}
+    .parking-desc{font-family:'Jost',sans-serif;font-size:0.86rem;font-weight:300;color:#7a6a5a;line-height:1.65;margin-top:auto}
+
     /* ══ FOOTER ══ */
     footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);border-top:1px solid rgba(200,152,90,0.15)}
 
     /* ══ MOBILE ══ */
     @media(max-width:640px){
       .airport-grid{grid-template-columns:1fr}
+      .parking-grid{grid-template-columns:1fr}
       .hotel-actions{flex-direction:column;align-items:flex-start}
       .hotel-distances{grid-template-columns:1fr}
       .flights-intro{flex-direction:column;text-align:center}
@@ -108,7 +130,7 @@
         <!-- Dark header -->
         <div class="hotel-card-top">
           <div class="hotel-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4" aria-hidden="true"><path d="M3 22V9a2 2 0 012-2h14a2 2 0 012 2v13"/><path d="M3 22h18"/><path d="M9 22v-5h6v5"/><rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="2" height="2"/><rect x="9" y="13" width="2" height="2"/><rect x="13" y="13" width="2" height="2"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.4" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 012 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
           </div>
           <div class="hotel-card-header">
             <div class="hotel-badge">Official Wedding Hotel</div>
@@ -137,19 +159,19 @@
           <div class="hotel-distances">
             <div class="dist-item">
               <div class="dist-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="12" r="4.5"/><circle cx="15" cy="12" r="4.5"/></svg>
               </div>
               <div class="dist-text"><strong>18 min</strong> to The Tides Estate (Reception)</div>
             </div>
             <div class="dist-item">
               <div class="dist-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><line x1="7" y1="7" x2="17" y2="7"/></svg>
               </div>
               <div class="dist-text"><strong>19 min</strong> to Immaculate Conception Church (Ceremony)</div>
             </div>
             <div class="dist-item">
               <div class="dist-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M22 16.5H2l2-9h16l2 9z"/><path d="M6 16.5v2"/><path d="M18 16.5v2"/><path d="M2 10.5h20"/><path d="M12 7.5v3"/><circle cx="8" cy="7" r="1"/><circle cx="16" cy="7" r="1"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
               </div>
               <div class="dist-text"><strong>27 min</strong> from Newark Airport (EWR)</div>
             </div>
@@ -188,7 +210,6 @@
           <div class="airport-rec">★ Recommended</div>
         </div>
         <div class="airport-card">
-          <svg class="airport-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.3" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
           <div class="airport-code">LGA</div>
           <div class="airport-name">LaGuardia Airport</div>
           <div class="airport-time-pill">
@@ -197,7 +218,6 @@
           </div>
         </div>
         <div class="airport-card">
-          <svg class="airport-plane" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.3" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
           <div class="airport-code">JFK</div>
           <div class="airport-name">John F. Kennedy International Airport</div>
           <div class="airport-time-pill">
@@ -207,7 +227,73 @@
         </div>
       </div>
 
-      <p class="flight-note">Ride-shares are readily available from all three airports.<br>Uber and Lyft both serve the Saddle Brook area.</p>
+    </div>
+
+    <!-- ══ PARKING ══ -->
+    <div class="travel-section fade-up">
+      <div class="section-label">
+        <div class="section-label-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        </div>
+        <div class="travel-section-eyebrow">Getting Around</div>
+      </div>
+      <h2 class="travel-section-title">Parking</h2>
+      <div class="travel-divider"></div>
+
+      <div class="parking-grid">
+
+        <!-- Hotel -->
+        <div class="parking-card">
+          <div class="parking-card-accent amber"></div>
+          <div class="parking-card-inner">
+            <div class="parking-icon-wrap amber">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><rect x="1" y="10" width="22" height="8" rx="2"/><path d="M5 10V7a2 2 0 012-2h10a2 2 0 012 2v3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+            </div>
+            <div class="parking-venue-label">Hotel</div>
+            <div class="parking-venue-name">Marriott Saddle Brook</div>
+            <div class="parking-badge amber">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Free Parking
+            </div>
+            <div class="parking-desc">Complimentary self-parking is available on-site for all hotel guests throughout your stay.</div>
+          </div>
+        </div>
+
+        <!-- Ceremony -->
+        <div class="parking-card">
+          <div class="parking-card-accent sage"></div>
+          <div class="parking-card-inner">
+            <div class="parking-icon-wrap sage">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7A35" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M9.5 9.5c.8-.5 4.2-.5 5 0l.5 4.5h-6l.5-4.5"/><path d="M9 22l2-7.5 1 2 1-2 2 7.5"/></svg>
+            </div>
+            <div class="parking-venue-label">Ceremony</div>
+            <div class="parking-venue-name">Immaculate Conception Church</div>
+            <div class="parking-badge sage">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Short Walk
+            </div>
+            <div class="parking-desc">A parking lot is available nearby and just a few minutes walk from the church entrance.</div>
+          </div>
+        </div>
+
+        <!-- Reception -->
+        <div class="parking-card">
+          <div class="parking-card-accent forest"></div>
+          <div class="parking-card-inner">
+            <div class="parking-icon-wrap forest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A5320" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M12 11l9-9"/><path d="M18 6l2 2"/><path d="M15 9l2 2"/></svg>
+            </div>
+            <div class="parking-venue-label">Reception</div>
+            <div class="parking-venue-name">The Tides Estate</div>
+            <div class="parking-badge forest">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Free Valet
+            </div>
+            <div class="parking-desc">Complimentary valet parking will be provided for all guests at the reception. Just pull up and enjoy.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
