@@ -36,7 +36,7 @@ nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;justify-content:center;
   gap:clamp(6px,2vw,14px);
-  padding:clamp(10px,2vw,16px) 20px;
+  padding:max(clamp(10px,2vw,16px),env(safe-area-inset-top)) 20px clamp(10px,2vw,16px);
   background:transparent;
 }
 .tab-btn{
@@ -46,20 +46,21 @@ nav{
   letter-spacing:0.18em;
   background:none;border:none;cursor:pointer;
   color:rgba(255,255,255,0.82);
-  padding:8px 18px;
+  padding:10px 20px;
+  min-height:44px;
   border-radius:30px;
   transition:color 0.2s,background 0.2s;
   text-shadow:0 1px 6px rgba(0,0,0,0.5);
   text-decoration:none;
-  display:inline-block;
+  display:inline-flex;align-items:center;
 }
 .tab-btn.active{color:#fff;background:rgba(200,152,90,0.25)}
-.tab-btn:hover{color:#fff}
+@media(hover:hover){.tab-btn:hover{color:#fff}}
 
 /* Dark nav text for pages with light headers */
 nav.nav-dark .tab-btn{color:var(--warm-dark);text-shadow:none}
 nav.nav-dark .tab-btn.active{color:var(--warm-dark);background:rgba(200,152,90,0.25)}
-nav.nav-dark .tab-btn:hover{color:var(--amber-dark)}
+@media(hover:hover){nav.nav-dark .tab-btn:hover{color:var(--amber-dark)}}
 
 /* ══ SHARED TYPOGRAPHY ══ */
 .eyebrow{

@@ -109,6 +109,19 @@ leahandben/
 - Google Fonts: Cinzel, Cormorant Garamond, Jost
 - RSVPify embed: `https://leahandben.rsvpify.com/embed`
 
+## Mobile Compatibility
+
+**All changes must work on mobile browsers**, including iOS Safari and Android Chrome. Follow these rules:
+
+- **Safe area insets:** Nav uses `env(safe-area-inset-top)` for notch/Dynamic Island support
+- **Viewport height:** Always include `min-height:100vh` fallback before `min-height:100svh`
+- **Hover states:** Wrap `:hover` transforms in `@media(hover:hover)` so they don't fire on touch devices
+- **Touch targets:** Interactive elements should be at least 44×44px (nav tabs use `min-height:44px`)
+- **`backdrop-filter`:** Always include `-webkit-backdrop-filter` alongside `backdrop-filter`
+- **IntersectionObserver:** Always wrap with `if ('IntersectionObserver' in window)` and add a fallback that immediately shows elements
+- **`background-attachment: fixed`:** Use `@supports(-webkit-touch-callout:none)` to switch to `scroll` on iOS
+- **Meta tags in base.html:** `color-scheme: light` prevents dark mode inversion; `theme-color: #4A5320` colors the browser UI chrome
+
 ## Workflow
 
 **Always run `python build.py` after any change** — to templates, style.css, or anything else. The build assembles pages from templates and re-encrypts the gate page. Never leave the user with stale generated files.
