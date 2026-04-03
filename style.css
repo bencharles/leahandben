@@ -91,6 +91,23 @@ nav.nav-dark .tab-btn:hover{color:var(--amber-dark)}
   letter-spacing:0.04em;
 }
 
+/* ══ PAGE HEADER (shared across interior pages) ══ */
+.page-header{
+  padding:clamp(72px,10vw,96px) 20px clamp(20px,3vw,28px);
+  text-align:center;
+  background:var(--cream);
+  border-bottom:1px solid rgba(200,152,90,0.15);
+}
+.page-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  font-weight:300;
+  color:var(--warm-dark);
+  letter-spacing:0.04em;
+  line-height:1.1;
+}
+.page-rule{width:44px;height:1px;background:var(--amber-dark);margin:16px auto 0;opacity:0.5}
+
 /* ══ FADE-UP ══ */
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
 .fade-up.visible{opacity:1;transform:none}
