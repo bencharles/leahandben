@@ -63,12 +63,13 @@
     .schedule{max-width:520px;margin:clamp(44px,6vw,64px) auto 0;text-align:left}
     .sched-item{display:flex;gap:0;position:relative;padding-bottom:clamp(32px,4vw,44px)}
     .sched-item:last-child{padding-bottom:0}
-    .sched-stem{display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;padding-top:4px}
+    .sched-stem{display:flex;flex-direction:column;align-items:center;width:60px;flex-shrink:0}
+    .sched-time{font-family:'Cinzel',serif;font-size:0.78rem;font-weight:500;letter-spacing:0.08em;color:var(--amber-dark);text-transform:uppercase;text-align:center;line-height:1.4;margin-bottom:6px}
     .sched-dot{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--amber);background:var(--cream);flex-shrink:0;z-index:2}
     .sched-item.featured .sched-dot{background:var(--amber);box-shadow:0 0 0 4px rgba(200,152,90,0.15);width:13px;height:13px}
     .sched-line{flex:1;width:1px;background:linear-gradient(to bottom,var(--amber),rgba(200,152,90,0.15));margin-top:6px}
     .sched-item:last-child .sched-line{display:none}
-    .sched-content{padding-left:clamp(16px,2.5vw,24px);flex:1}
+    .sched-content{padding-left:clamp(12px,2vw,20px);flex:1}
     .sched-header{display:flex;align-items:center;gap:10px;margin-bottom:5px}
     .sched-icon{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(200,152,90,0.5);background:rgba(200,152,90,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .sched-event{font-family:'Cormorant Garamond',serif;font-size:clamp(1.55rem,3.2vw,2.1rem);font-weight:300;color:var(--warm-dark);line-height:1.2}
@@ -135,6 +136,7 @@
         <!-- Ceremony -->
         <div class="sched-item featured">
           <div class="sched-stem">
+            <div class="sched-time">12:30 PM</div>
             <div class="sched-dot"></div>
             <div class="sched-line"></div>
           </div>
@@ -148,7 +150,6 @@
               </div>
               <div class="sched-event">Ceremony</div>
             </div>
-
             <div class="sched-venue">Immaculate Conception Church</div>
             <div class="sched-address">30 N Fullerton Ave, Montclair, NJ 07042</div>
             <a class="sched-btn" href="https://maps.google.com/?q=30+N+Fullerton+Ave+Montclair+NJ+07042" target="_blank">
@@ -161,6 +162,7 @@
         <!-- Cocktail Hour & Reception -->
         <div class="sched-item">
           <div class="sched-stem">
+            <div class="sched-time">5:00 PM</div>
             <div class="sched-dot"></div>
           </div>
           <div class="sched-content">
@@ -173,7 +175,6 @@
               </div>
               <div class="sched-event">Cocktail Hour &amp; Reception</div>
             </div>
-
             <div class="sched-venue">The Tides Estate</div>
             <div class="sched-address">1245 Belmont Ave, North Haledon, NJ 07508</div>
             <a class="sched-btn" href="https://maps.google.com/?q=1245+Belmont+Ave+North+Haledon+NJ+07508" target="_blank">
