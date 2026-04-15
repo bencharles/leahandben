@@ -68,6 +68,7 @@ def assemble(page_name, auth_check=''):
     html = html.replace('{{NAV_RSVP_CLS}}', ' active' if page['nav_active'] == 'rsvp' else '')
     html = html.replace('{{NAV_FAQ_CLS}}', ' active' if page['nav_active'] == 'faq' else '')
     html = html.replace('{{NAV_TRAVEL_CLS}}', ' active' if page['nav_active'] == 'travel' else '')
+    html = html.replace('{{NAV_EXPLORE_CLS}}', ' active' if page['nav_active'] == 'explore' else '')
 
     return html
 
@@ -241,7 +242,13 @@ def main():
     travel_out.write_text(travel_html)
     print(f'  travel.html             ({len(travel_html)/1024:.1f} KB)')
 
-    # 5. Encrypt index into gate page
+    # 5. Assemble Explore (with auth check)
+    explore_html = assemble('explore.html', auth_check=auth)
+    explore_out = ROOT / 'explore.html'
+    explore_out.write_text(explore_html)
+    print(f'  explore.html            ({len(explore_html)/1024:.1f} KB)')
+
+    # 6. Encrypt index into gate page
     gate_html = encrypt_page(index_html)
     gate_out = ROOT / 'index.html'
     gate_out.write_text(gate_html)

@@ -1,0 +1,253 @@
+{{TITLE: Explore — Leah & Ben}}
+{{NAV_ACTIVE: explore}}
+{{NAV_CLASS: nav-dark}}
+
+{{STYLES}}
+
+    /* ══ CONTENT ══ */
+    .explore-content{max-width:1040px;margin:0 auto}
+
+    /* ══ CITY SECTIONS ══ */
+    .city-section{padding:clamp(48px,7vw,80px) clamp(20px,5vw,56px)}
+    .city-section.cream{background:var(--cream)}
+    .city-section.white{background:#fff}
+
+    /* ══ POSTMARK HEADER ══ */
+    .postmark-wrap{display:flex;align-items:center;gap:clamp(20px,4vw,48px);margin-bottom:clamp(36px,5vw,52px)}
+    .postmark{width:clamp(88px,13vw,120px);height:clamp(88px,13vw,120px);border-radius:50%;border:2px solid var(--amber);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;position:relative;background:#fff}
+    .city-section.cream .postmark{background:var(--cream)}
+    .postmark::before{content:'';position:absolute;inset:5px;border-radius:50%;border:1px dashed rgba(200,152,90,0.35)}
+    .postmark-state{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.2em;color:var(--amber-dark);text-transform:uppercase;margin-bottom:3px}
+    .postmark-city{font-family:'Cinzel',serif;font-size:clamp(0.62rem,1.3vw,0.78rem);font-weight:500;letter-spacing:0.08em;color:var(--forest);text-align:center;line-height:1.2}
+    .postmark-year{font-family:'Cinzel',serif;font-size:0.5rem;letter-spacing:0.14em;color:var(--amber-dark);margin-top:3px}
+    .postmark-info{flex:1}
+    .postmark-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3rem);font-weight:300;color:var(--warm-dark);line-height:1.05;letter-spacing:0.03em;margin-bottom:12px}
+    .postmark-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(0.95rem,1.8vw,1.1rem);font-weight:300;color:#7a6a5a;line-height:1.7;max-width:560px}
+    .postmark-dist{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.16em;color:var(--amber-dark);padding:5px 14px;border:1px solid rgba(200,152,90,0.3);border-radius:20px}
+
+    /* ══ POSTCARD GRID ══ */
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.5vw,22px)}
+
+    /* ══ POSTCARD ══ */
+    .postcard{background:#fff;border:1px solid rgba(200,152,90,0.18);border-radius:12px;overflow:hidden;box-shadow:0 3px 16px rgba(38,24,10,0.08);display:flex;flex-direction:column}
+    @media(hover:hover){.postcard:hover{transform:translateY(-4px) rotate(0.4deg);box-shadow:0 12px 36px rgba(38,24,10,0.13)}}
+    .postcard{transition:transform 0.2s,box-shadow 0.2s}
+    .postcard-top-bar{height:5px}
+    .postcard-top-bar.eat{background:linear-gradient(90deg,var(--amber),var(--amber-dark))}
+    .postcard-top-bar.see{background:linear-gradient(90deg,var(--sage),var(--sage-light))}
+    .postcard-top-bar.out{background:linear-gradient(90deg,var(--forest),#5e6b28)}
+    .postcard-body{padding:clamp(18px,2.5vw,26px);flex:1;display:flex;flex-direction:column}
+    .postcard-stamp{width:36px;height:44px;border:1.5px solid rgba(200,152,90,0.3);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-left:auto;margin-bottom:14px;background:rgba(246,239,224,0.5)}
+    .postcard-cat{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:8px}
+    .postcard-cat.eat{color:var(--amber-dark)}
+    .postcard-cat.see{color:var(--sage)}
+    .postcard-cat.out{color:var(--forest)}
+    .postcard-name{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.2vw,1.35rem);font-weight:400;color:var(--warm-dark);line-height:1.2;margin-bottom:10px}
+    .postcard-rule{width:28px;height:1px;background:var(--amber);opacity:0.4;margin-bottom:10px}
+    .postcard-desc{font-family:'Jost',sans-serif;font-size:0.84rem;font-weight:300;color:#7a6a5a;line-height:1.65;flex:1}
+    .postcard-tag-row{margin-top:14px;display:flex;flex-wrap:wrap;gap:5px}
+    .postcard-tag{font-family:'Cinzel',serif;font-size:0.52rem;letter-spacing:0.12em;padding:3px 8px;border-radius:8px;color:#9a8a7a;border:1px solid rgba(154,138,122,0.28)}
+
+    /* ══ SECTION BREAK ══ */
+    .section-break{height:3px;background:linear-gradient(90deg,var(--forest),#5e6b28,var(--forest))}
+
+    /* ══ FOOTER ══ */
+    footer{text-align:center;padding:clamp(44px,7vw,64px) 20px clamp(28px,4vw,40px);background:var(--cream);border-top:1px solid rgba(200,152,90,0.15)}
+
+    /* ══ MOBILE ══ */
+    @media(max-width:640px){
+      .card-grid{grid-template-columns:1fr}
+      .postmark-wrap{flex-direction:column;text-align:center}
+      .postmark-dist{margin:14px auto 0}
+      .postmark-desc{max-width:100%}
+    }
+    @media(min-width:641px) and (max-width:860px){
+      .card-grid{grid-template-columns:1fr 1fr}
+    }
+{{/STYLES}}
+
+{{BODY}}
+  <!-- ══ PAGE HEADER ══ -->
+  <div class="page-header">
+    <h1 class="page-title">Things To Do</h1>
+    <div class="page-rule"></div>
+    <p class="page-subtitle">We love that you're making the trip — here are some of our favorite spots to explore before or after the celebration.</p>
+  </div>
+
+  <div class="explore-content">
+
+    <!-- ══ MONTCLAIR ══ -->
+    <div class="city-section cream fade-up">
+      <div class="postmark-wrap">
+        <div class="postmark">
+          <div class="postmark-state">New Jersey</div>
+          <div class="postmark-city">Mont-<br>clair</div>
+          <div class="postmark-year">Aug 2026</div>
+        </div>
+        <div class="postmark-info">
+          <div class="postmark-title">Montclair, NJ</div>
+          <div class="postmark-desc">Home to our ceremony — and a vibrant arts town worth exploring before or after. Great food, art, and hiking trails, all about 20 minutes from the hotel.</div>
+          <div class="postmark-dist">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~20 min from hotel
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- Eat -->
+        <div class="postcard">
+          <div class="postcard-top-bar eat"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="postcard-cat eat">Eat &amp; Drink</div>
+            <div class="postcard-name">Halcyon</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">A moody, intimate cocktail bar with inventive small plates. One of the best bars in New Jersey — worth a reservation.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Cocktail Bar</span>
+              <span class="postcard-tag">Small Plates</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- See -->
+        <div class="postcard">
+          <div class="postcard-top-bar see"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A35" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="postcard-cat see">See &amp; Do</div>
+            <div class="postcard-name">Montclair Art Museum</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">A gem of a regional museum with a strong collection of American art and wonderful rotating exhibitions.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Museum</span>
+              <span class="postcard-tag">Art</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outdoors -->
+        <div class="postcard">
+          <div class="postcard-top-bar out"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5320" stroke-width="1.5" aria-hidden="true"><path d="M3 18l4-8 4 5 3-3 4 6H3z"/><circle cx="18" cy="6" r="3"/></svg>
+            </div>
+            <div class="postcard-cat out">Get Outside</div>
+            <div class="postcard-name">Mills Reservation</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">Wooded trails and a ridge with sweeping views of the Manhattan skyline. Stunning at sunset.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Hiking</span>
+              <span class="postcard-tag">Skyline Views</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-break"></div>
+
+    <!-- ══ NEW YORK ══ -->
+    <div class="city-section white fade-up">
+      <div class="postmark-wrap">
+        <div class="postmark" style="border-color:var(--amber-dark)">
+          <div class="postmark-state" style="color:var(--amber-dark)">New York</div>
+          <div class="postmark-city" style="color:var(--warm-dark)">New<br>York</div>
+          <div class="postmark-year" style="color:var(--amber-dark)">Aug 2026</div>
+        </div>
+        <div class="postmark-info">
+          <div class="postmark-title">New York City</div>
+          <div class="postmark-desc">A bit further, but very accessible — NJ Transit runs direct from the area straight into Penn Station. The greatest city in the world is worth the trip.</div>
+          <div class="postmark-dist">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ~1 hr via NJ Transit
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- Eat -->
+        <div class="postcard">
+          <div class="postcard-top-bar eat"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8985A" stroke-width="1.5" aria-hidden="true"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="postcard-cat eat">Eat &amp; Drink</div>
+            <div class="postcard-name">Smorgasburg</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">Brooklyn's legendary open-air food market. Held Saturdays in Williamsburg — an essential New York experience.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Food Market</span>
+              <span class="postcard-tag">Saturdays</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- See -->
+        <div class="postcard">
+          <div class="postcard-top-bar see"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7A35" stroke-width="1.5" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="postcard-cat see">See &amp; Do</div>
+            <div class="postcard-name">The High Line</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">An elevated park built on a former rail line, with art installations, gardens, and sweeping city views. Free to visit.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Free</span>
+              <span class="postcard-tag">Chelsea</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outdoors -->
+        <div class="postcard">
+          <div class="postcard-top-bar out"></div>
+          <div class="postcard-body">
+            <div class="postcard-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A5320" stroke-width="1.5" aria-hidden="true"><path d="M3 18l4-8 4 5 3-3 4 6H3z"/><circle cx="18" cy="6" r="3"/></svg>
+            </div>
+            <div class="postcard-cat out">Get Outside</div>
+            <div class="postcard-name">Central Park</div>
+            <div class="postcard-rule"></div>
+            <div class="postcard-desc">843 acres in the heart of Manhattan. Rent a rowboat, grab a hot dog, or find a quiet spot on the Great Lawn.</div>
+            <div class="postcard-tag-row">
+              <span class="postcard-tag">Free</span>
+              <span class="postcard-tag">Midtown</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-names">Leah &amp; Ben</div>
+  </footer>
+{{/BODY}}
+
+{{SCRIPTS}}
+  <script>
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.08});
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+}
+  </script>
+{{/SCRIPTS}}
